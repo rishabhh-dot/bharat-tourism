@@ -3,82 +3,167 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Body */
 body {
-  background: #f5f7fa;
+  background: #f4f7fb;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Header */
-header {
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #0a3d62;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: #0a3d62;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.logo {
   color: #fff;
-}
-
-header h1 {
   font-size: 22px;
+  font-weight: bold;
 }
 
-header input {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  outline: none;
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00d2ff;
 }
 
 /* Hero */
 .hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
   text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(to right, #1e90ff, #00bcd4);
   color: white;
 }
 
-.hero h2 {
-  font-size: 32px;
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  margin-top: 10px;
+.hero input {
+  margin-top: 20px;
+  padding: 12px;
+  width: 300px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
 }
 
-/* Container */
+/* Section */
+.cities-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.cities-section h2 {
+  margin-bottom: 20px;
+}
+
+/* Grid */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 20px;
   gap: 20px;
 }
 
 /* Card */
 .card {
-  background: #fff;
-  border-radius: 10px;
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: 0.3s;
   cursor: pointer;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
 }
 
 .card img {
   width: 100%;
-  height: 160px;
+  height: 180px;
   object-fit: cover;
 }
 
 .card h3 {
   padding: 10px;
+}
+
+/* About */
+.about {
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(to right, #1e90ff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.newsletter button {
+  padding: 10px 15px;
+  border: none;
+  background: #0a3d62;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: #082f49;
+}
+
+/* Footer */
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
 /* Modal */
@@ -94,36 +179,14 @@ header input {
 
 .modal-content {
   background: white;
-  margin: 5% auto;
-  padding: 20px;
   width: 90%;
   max-width: 600px;
+  margin: 5% auto;
+  padding: 20px;
   border-radius: 10px;
   position: relative;
 }
-.map-btn {
-  display: inline-block;
-  background: #0a3d62;
-  color: white;
-  text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-  margin-top: 10px;
-}
 
-.map-btn {
-  display: inline-block;
-  background: #0a3d62;
-  color: white;
-  text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-.map-btn:hover {
-  background: #082f49;
-}
 #close {
   position: absolute;
   right: 15px;
@@ -132,19 +195,32 @@ header input {
   cursor: pointer;
 }
 
-/* Details */
-#details h2 {
-  margin-bottom: 10px;
+/* Button */
+.map-btn {
+  display: inline-block;
+  background: #0a3d62;
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
 }
 
-#details p {
-  margin: 5px 0;
+.map-btn:hover {
+  background: #082f49;
 }
 
 /* Responsive */
-@media(max-width: 600px) {
-  header {
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero input {
+    width: 90%;
+  }
+
+  .navbar {
     flex-direction: column;
-    gap: 10px;
   }
   }
