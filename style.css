@@ -101,7 +101,29 @@ header input {
   border-radius: 10px;
   position: relative;
 }
+.map-btn {
+  display: inline-block;
+  background: #0a3d62;
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
 
+.map-btn {
+  display: inline-block;
+  background: #0a3d62;
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.map-btn:hover {
+  background: #082f49;
+}
 #close {
   position: absolute;
   right: 15px;
