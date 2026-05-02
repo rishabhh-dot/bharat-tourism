@@ -3,27 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore India</title>
+  <title>Explore India - Travel Guide</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <header>
-    <h1>🇮🇳 Explore India</h1>
-    <input type="text" id="search" placeholder="Search city...">
-  </header>
+  <nav class="navbar">
+    <div class="logo">🇮🇳 Explore India</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#cities">Cities</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2>Discover Beautiful Places in India</h2>
-    <p>Find tourist spots, travel tips, and more</p>
+    <div class="hero-content">
+      <h1>Discover India Like Never Before</h1>
+      <p>Explore cities, tourist places, and travel guides</p>
+      <input type="text" id="search" placeholder="Search city or state...">
+    </div>
   </section>
 
-  <!-- Cities Container -->
-  <section id="cities" class="container"></section>
+  <!-- Cities Section -->
+  <section id="cities" class="cities-section">
+    <h2>Popular Cities</h2>
+    <div id="citiesContainer" class="container"></div>
+  </section>
 
-  <!-- Modal (Details) -->
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About This Website</h2>
+    <p>
+      This platform helps you explore India's most beautiful cities,
+      tourist attractions, travel tips, and more.
+    </p>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe for travel updates</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Explore India | Made by You 💻</p>
+  </footer>
+
+  <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span id="close">&times;</span>
@@ -33,4 +65,4 @@
 
   <script src="script.js"></script>
 </body>
-        </html>
+      </html>
